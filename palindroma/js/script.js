@@ -3,32 +3,23 @@ function paliword(word) {
         new_word = new_word.reverse('')
         new_word = new_word.join('')
         console.log(new_word)
-        return new_word
+        if(new_word === word) {
+            return true
+        }
+        else {
+            return false
+        }
 }
-
+                                          
 let user_word = prompt('inserisci una parola')
 
 let final_esit = paliword(user_word)
 
-let esit = true
 
-if (user_word == final_esit) {
-    esit == true
+if (final_esit) {
+    alert('palindroma')
 }
 
 else {
-    esit == false
+    alert('NON palindroma')
 }
-
-console.log(esit)
-
-if (esit == true) {
-    alert('la parola inserita è palindroma')
-}
-else {
-    alert('la parola inserita NON è palindroma')
-}
-
-console.log(final_esit)
-
-console.log(user_word)
